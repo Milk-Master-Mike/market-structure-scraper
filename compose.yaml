@@ -1,0 +1,17 @@
+services:
+  market-structure-scraper:
+    build: .
+    environment:
+      MARKET_STRUCTURE_USER_AGENT: ${MARKET_STRUCTURE_USER_AGENT:-}
+      MARKET_STRUCTURE_CACHE_DIR: /var/cache/market-structure-scraper
+    ports:
+      - "127.0.0.1:8081:8080"
+    volumes:
+      - http-cache:/var/cache/market-structure-scraper
+    read_only: true
+    tmpfs: [/tmp]
+    security_opt: [no-new-privileges:true]
+
+volumes:
+  http-cache:
+

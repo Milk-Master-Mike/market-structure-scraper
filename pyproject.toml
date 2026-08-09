@@ -1,0 +1,36 @@
+[build-system]
+requires = ["hatchling>=1.25"]
+build-backend = "hatchling.build"
+
+[project]
+name = "market-structure-scraper"
+version = "0.1.0"
+description = "Nasdaq symbol-directory and FINRA short-volume evidence collector"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "Milk-Master-Mike" }]
+dependencies = [
+  "fastapi>=0.115,<1",
+  "httpx>=0.27,<1",
+  "pydantic>=2.8,<3",
+  "pydantic-settings>=2.4,<3",
+  "uvicorn>=0.30,<1",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=8.2,<9"]
+
+[project.scripts]
+market-structure-scraper = "market_structure_scraper.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/market_structure_scraper"]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["tests"]
+
+[tool.market-data-contracts]
+compatible-version = ">=0.1.0,<0.2.0"
+

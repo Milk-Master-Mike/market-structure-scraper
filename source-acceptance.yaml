@@ -1,0 +1,24 @@
+version: 1
+sources:
+  - id: nasdaq-trader-symbol-directory
+    owner: Nasdaq Trader
+    urls:
+      - https://www.nasdaqtrader.com/dynamic/SymDir/nasdaqlisted.txt
+      - https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt
+    purpose: symbol, listing venue, security name, test-issue, ETF, and round-lot evidence
+    authentication: none
+    redistribution: normalized directory fields and provenance only
+  - id: finra-regsho-daily-short-volume
+    owner: FINRA
+    url_template: https://cdn.finra.org/equity/regsho/daily/CNMSshvol{YYYYMMDD}.txt
+    purpose: daily off-exchange and exchange-reported short-sale volume context
+    authentication: none
+    redistribution: normalized daily aggregates and provenance only
+controls:
+  identified_user_agent_required: true
+  max_requests_per_second: 4
+  bounded_concurrency: 2
+  cache_required: true
+  captcha_or_access_bypass: prohibited
+  short_volume_labeled_as_short_interest: prohibited
+

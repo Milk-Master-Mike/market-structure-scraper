@@ -1,0 +1,4 @@
+Date|Symbol|ShortVolume|ShortExemptVolume|TotalVolume|Market
+20260114|EXMPL|25000|500|100000|Q
+20260114|OTHER|1000|0|5000|Q
+

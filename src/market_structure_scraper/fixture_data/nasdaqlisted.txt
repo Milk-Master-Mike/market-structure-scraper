@@ -1,0 +1,4 @@
+Symbol|Security Name|Market Category|Test Issue|Financial Status|Round Lot Size|ETF|NextShares
+EXMPL|Example Technology Corporation Common Stock|Q|N|N|100|N|N
+OTHER|Other Example Corporation Common Stock|G|N|N|100|N|N
+File Creation Time: 20260114|||||||
