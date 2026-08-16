@@ -1,5 +1,7 @@
 # Market Structure Scraper
 
+> **Archived:** This service now lives in [`market-research-platform`](https://github.com/Milk-Master-Mike/market-research-platform/tree/main/services/market-structure). Its full Git history was preserved in the monorepo.
+
 An independently runnable collector for Nasdaq Trader symbol directories and
 FINRA daily short-sale volume files. It reconciles listing evidence against a
 resolved SEC identity, retains conflicts, and returns provenance and partial
@@ -80,4 +82,3 @@ and [FINRA short-sale volume data](https://www.finra.org/finra-data/browse-catal
 The strict local models are compatible with
 `market-data-contracts >=0.1.0,<0.2.0`, as pinned in `pyproject.toml`, until the
 independent contracts release is available.
-
